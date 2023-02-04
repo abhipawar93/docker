@@ -1,0 +1,17 @@
+# use an existing image as a base
+
+FROM node:16-alpine
+
+# Download and insatll dependency
+
+WORKDIR /usr/app/abhi
+
+COPY package.json .  
+run npm install
+
+# copy all the remainnig files
+COPY . .
+# what to do when it starts as a container
+
+CMD ["npm","start"]
+

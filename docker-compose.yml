@@ -1,0 +1,11 @@
+version: '3'
+services: 
+    abhi-dev-server:
+        build:
+          context: .
+          dockerfile: Dockerfile.dev
+        ports:
+          - "8080:8080"
+        volumes:
+          - /usr/app/abhi/node_modules
+          - .:/usr/app/abhi
